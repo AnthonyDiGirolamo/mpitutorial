@@ -1,3 +1,4 @@
+#!/usr/bin/make
 CC = mpicc
 CFLAGS=-g -Wall
 LDFLAGS=

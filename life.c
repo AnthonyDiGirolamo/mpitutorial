@@ -30,7 +30,7 @@
 #include <unistd.h>
 #include <getopt.h>
 
-#define CHECKMALLOC(var) if((var) == NULL) { fputs("ERROR: malloc()\n", stderr); }
+#define CHECKMALLOC(var) if((var) == NULL) { printf("ERROR: malloc()\n"); abort(); }
 
 void printhelp() {
 	printf("Usage: life -i [ITERATIONS] -r [ROWS] -c [COLS]\n");
@@ -312,7 +312,7 @@ int main(int argc, char *argv[] ) {
 	}
 
 	if (file_open_error != MPI_SUCCESS) {
-		fputs("MPI_File_open: The initial condition could not be opened.", stderr);
+		printf("MPI_File_open: The initial condition could not be opened.");
 		MPI_Finalize();
 		exit(EXIT_FAILURE);
 	}
