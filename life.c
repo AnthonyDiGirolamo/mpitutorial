@@ -199,6 +199,7 @@ int main(int argc, char *argv[] ) {
 	int checkpoint_counter;
 	char *checkpoint_fullname;
 	checkpoint_fullname = (char*) malloc(128 * sizeof(char));
+	CHECKMALLOC(checkpoint_fullname);
 	int i = 0;
 	//int c, row=0, col=0;
 
