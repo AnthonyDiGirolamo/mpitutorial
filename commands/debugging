@@ -1,0 +1,2 @@
+# Here is how to run a debugging using gdb in xterms
+mpirun -np 2 xterm -e "export PATH=$HOME/apps/openmpi133/bin:$PATH ; export LD_LIBRARY_PATH=$HOME/apps/openmpi133/lib:$HOME/apps/openmpi133/lib/openmpi:$LD_LIBRARY_PATH ; gdb -q --args ./life -r 2048 -c 2048 -i 20 -I init"

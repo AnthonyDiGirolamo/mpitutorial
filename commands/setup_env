@@ -1,0 +1,6 @@
+# If you don't install OpenMPI in a prefix like /usr or /usr/local you'll
+# need to run these before compiling or running any MPI apps
+PREFIX=$HOME/apps/openmpi133
+export PATH=$PREFIX/bin:$PATH
+export LD_LIBRARY_PATH=$PREFIX/lib:$PREFIX/lib/openmpi:$LD_LIBRARY_PATH
+
