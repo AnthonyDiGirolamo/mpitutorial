@@ -1,0 +1,12 @@
+#!/bin/sh
+#PBS -l nodes=1:ppn=8
+#PBS -N life_tutorial
+#PBS -l walltime=00:30:00
+#PBS -j oe
+
+source /packages/usepackage-1.8/share/usepackage/use.bsh
+use gcc-mvapich-1.0.1
+# cd $PBS_O_WORKDIR
+cd $HOME/mpitutorial
+mpiexec life --iterations 10 --rows 1024 --cols 1024
+
