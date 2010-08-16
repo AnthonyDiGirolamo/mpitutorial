@@ -6,7 +6,11 @@
 
 source /packages/usepackage-1.8/share/usepackage/use.bsh
 use gcc-mvapich-1.0.1
+
+./mkinit 1024 1024 input_file
+
 # cd $PBS_O_WORKDIR
 cd $HOME/mpitutorial
-mpiexec life --iterations 10 --rows 1024 --cols 1024
+
+mpiexec life --iterations 10 --rows 1024 --cols 1024 --initial input_file
 
