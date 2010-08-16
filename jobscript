@@ -12,5 +12,5 @@ use gcc-mvapich-1.0.1
 # cd $PBS_O_WORKDIR
 cd $HOME/mpitutorial
 
-mpiexec life --iterations 10 --rows 1024 --cols 1024 --initial input_file
+mpiexec life --iterations 10 --rows 1024 --columns 1024 --initial input_file --output ending_file
 
