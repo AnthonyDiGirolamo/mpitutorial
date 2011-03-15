@@ -1,12 +1,12 @@
 #!/bin/sh -x
-PREFIX=$HOME/apps/openmpi133
+PREFIX=$HOME/openmpi-1.4.3
 
-if [ ! -f ./openmpi-1.3.3.tar.bz2 ]; then
-	wget http://www.open-mpi.org/software/ompi/v1.3/downloads/openmpi-1.3.3.tar.bz2
+if [ ! -f ./openmpi-1.4.3.tar.bz2 ]; then
+	wget http://www.open-mpi.org/software/ompi/v1.4/downloads/openmpi-1.4.3.tar.bz2
 fi
-rm -rf openmpi-1.3.3
-tar xjf openmpi-1.3.3.tar.bz2
-cd openmpi-1.3.3
+rm -rf openmpi-1.4.3
+tar xjf openmpi-1.4.3.tar.bz2
+cd openmpi-1.4.3
 # Change the prefix as needed
 ./configure --prefix=$PREFIX
 make
